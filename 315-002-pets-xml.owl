@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http:/www.ridenour.soisuwm.edu/315002/pets#"
+     xml:base="http:/www.ridenour.soisuwm.edu/315002/pets"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#hasNeed -->
+
+    <owl:ObjectProperty rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#hasNeed">
+        <owl:inverseOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#isNeedOf"/>
+        <rdfs:domain rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#hasOwner">
+        <owl:inverseOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#isOwnerOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#isNeedOf -->
+
+    <owl:ObjectProperty rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#isNeedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#isOwnerOf -->
+
+    <owl:ObjectProperty rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#isOwnerOf">
+        <rdfs:domain rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Animal -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Animal"/>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Bird -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Bird">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#BirdCage -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#BirdCage">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#BirdEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#BirdEnvironment -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#BirdEnvironment">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#BirdToys -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#BirdToys">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Toys"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Cage -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Cage">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CageEnvironment -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CageEnvironment">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CagedRodent -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CagedRodent">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CagedRodentToys -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CagedRodentToys">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Toys"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Cat -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Cat">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CatFood -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CatFood">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CatKibble -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CatKibble">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#CatFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#CatToys -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#CatToys">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Toys"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Dog -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Dog">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogBed -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogBed">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#DogEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogEnvironment -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogEnvironment">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogFood -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogFood">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogFoodCanned -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogFoodCanned">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#DogFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogFoodKibble -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogFoodKibble">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#DogFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogKennel -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogKennel">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#DogEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogLeash -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogLeash">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#DogEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DogToys -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DogToys">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Toys"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#DrinkingWater -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#DrinkingWater">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Entertainment -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Entertainment">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Fish -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Fish">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#FishBowl -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#FishBowl">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#FishEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#FishEnvironment -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#FishEnvironment">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#FishTank -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#FishTank">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#FishEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Food -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Food">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#HamsterFood -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#HamsterFood">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#HamsterNibbles -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#HamsterNibbles">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#HamsterFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#House -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#House">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Isolation -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Isolation">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#EnvironmentalNeeds"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#LaserPointer -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#LaserPointer">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Toys"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Lizard -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Lizard">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Pet"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Needs -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Needs"/>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Owner -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Owner">
+        <rdfs:comment rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The owner of a pet, either a person or other entity. An owner must have at least one pet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Pet -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Pet">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#SameSpecies -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#SameSpecies">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Isolation"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Terrarium -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Terrarium">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Toys -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Toys">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#Entertainment"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Water -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Water">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#WetCatFood -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#WetCatFood">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#CatFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/www.ridenour.soisuwm.edu/315002/pets#Yard -->
+
+    <owl:Class rdf:about="http:/www.ridenour.soisuwm.edu/315002/pets#Yard">
+        <rdfs:subClassOf rdf:resource="http:/www.ridenour.soisuwm.edu/315002/pets#LivingCondition"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
